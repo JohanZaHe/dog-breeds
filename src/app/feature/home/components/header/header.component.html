@@ -1,0 +1,53 @@
+<section class="d-flex align-items-center justify-content-center">
+  <div class="d-flex flex-column flex-lg-row justify-content-evenly w-100">
+    <div class="flex-sm">
+      <img
+        src="assets/images/header-dog.png"
+        width="600px"
+        style="max-width: 100%"
+        alt=""
+      />
+    </div>
+    <div class="align-self-center mb-5">
+      <h2>Find your new friend</h2>
+      <p>
+        We help you to find a dog that will give you a lot of care, good
+        feelings and emotions
+      </p>
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search for breed or sub-breed"
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+        [matAutocompletePosition]="'below'"
+        aria-label="dogBreed"
+        id="dogBreed"
+        [class.matAutocompleteIsOpen]="auto.isOpen"
+      />
+      <mat-autocomplete #auto="matAutocomplete" class="breedAutoComplete">
+        <mat-option
+          *ngFor="let option of options | breedsSearch: myControl.value"
+          [value]="option.fullName"
+          (click)="viewDetails(option)"
+        >
+          <div
+            class="d-flex flex-row align-items-center justify-content-between"
+          >
+            <div>
+              <img
+                src="{{ option | image | async }}"
+                onError="this.src='assets/images/dog-profile.png'"
+                class="breed-photo me-3"
+                alt=""
+              />
+              {{ option.fullName | titlecase }}
+            </div>
+            <mat-icon class="me-0">open_in_new</mat-icon>
+          </div>
+        </mat-option>
+      </mat-autocomplete>
+    </div>
+  </div>
+</section>

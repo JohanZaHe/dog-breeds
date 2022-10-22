@@ -1,0 +1,25 @@
+<div mat-dialog-title class="d-flex flex-row justify-content-between">
+  <h2>Breed details</h2>
+  <mat-icon mat-dialog-close>close</mat-icon>
+</div>
+<mat-dialog-content>
+  <div class="row">
+    <section class="profile col-12 col-md-3 p-0 text-center">
+      <img
+        src="{{ data | image | async }}"
+        onError="this.src='assets/images/dog-profile.png'"
+        class="img-profile mask-none"
+        alt="..."
+      />
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ data?.fullName | titlecase }}</h5>
+      </div>
+      <app-characteristics [dogInfo]="dogInfo"></app-characteristics>
+    </section>
+    <section class="col-12 col-md-8 p-0">
+      <app-video [videoUrl]="videoUrl"></app-video>
+      <mat-divider [inset]="true" class="col-12 ms-0 mt-4"></mat-divider>
+      <app-suggestions></app-suggestions>
+    </section>
+  </div>
+</mat-dialog-content>

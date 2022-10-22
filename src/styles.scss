@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-family: "Galano Grotesque", sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: url("https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(50px);
+}
+
+* {
+  font-family: "Galano Grotesque", sans-serif;
+}
+
+section {
+  padding: 0px 5%;
+  width: 90%;
+  padding-top: 5rem;
+  margin: 0 auto;
+}
+
+img {
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to top, transparent 1%, black 50%);
+  mask-image: linear-gradient(to top, transparent 1%, black 50%);
+}
+
+input {
+  border-radius: 9px !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: block; /* Ocultar scroll */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}

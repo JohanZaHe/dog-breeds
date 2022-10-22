@@ -1,0 +1,46 @@
+::ng-deep app-header {
+  input[id="dogBreed"] {
+    background: url("https://cdn-icons-png.flaticon.com/512/116/116836.png")
+      no-repeat scroll;
+    background-size: 20px;
+    background-position: 13px 13px;
+    padding-left: 38px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    &:focus {
+      box-shadow: 0 0 8px 0.25rem rgb(13 110 253 / 25%);
+    }
+  }
+
+  section {
+    height: 100vh;
+    min-height: 600px;
+    padding-top: 0px;
+  }
+
+  .matAutocompleteIsOpen {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+}
+
+::ng-deep .breedAutoComplete {
+  outline: 0;
+  border: 1px solid #86b7fe;
+  border-top: 0px;
+  box-shadow: 0 2px 8px 0.25rem rgb(13 110 253 / 25%) !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  &::-webkit-scrollbar-track {
+    margin-bottom: 13px;
+  }
+  img.breed-photo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

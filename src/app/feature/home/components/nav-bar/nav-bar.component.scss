@@ -1,0 +1,11 @@
+nav,
+.navbar {
+  height: 60px;
+  padding: 20px 30px;
+  backdrop-filter: blur(100px);
+  width: 100%;
+  top: 0px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
