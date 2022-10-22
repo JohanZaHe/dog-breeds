@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://dog.ceo/api/',
+  moreInfoApiUrl: 'https://api-dog-breeds.herokuapp.com/api/',
+  youtubeApiUrl: 'https://www.googleapis.com/youtube/v3/',
+  youtubeKey: 'AIzaSyAqrwSRiSZoG5eqobmK0Ngqupz9zX6ZH-I'
 };
 
 /*
